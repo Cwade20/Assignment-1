@@ -36,8 +36,12 @@ a. Using Excel, Python, or R, create a scatterplot of Lot Size vs. Income, color
 ```python
 import pandas as pd
 import seaborn as sns
+#imports the graphing program seaborn that i will be using
 df = pd.read_csv("/Users/Charles/Desktop/GMU/GBUS738/Ridingmowers2.csv", delimiter="," , header = 0, nrows=25, skiprows=0)
+#calls for our data set to be set to df, also calls for where our csv is located
 sns.scatterplot('LotSize', 'Income', hue='Ownership', data=df).set(title = 'Household Classification of Riding Mowers', xlabel = 'LotSize in 1000ft2', ylabel = 'Income in $1000s')
+#sets a scatterplot using paramaters x is lotsize, y is income, color is based on ownership, then calls for the data set of df
+#we set the title, x and y axis
 ```
 
 
